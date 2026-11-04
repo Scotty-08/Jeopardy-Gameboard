@@ -1,0 +1,260 @@
+body {
+  --nav-background: #C8102E;
+  --nav-color: gold;
+  --nav-border: #E8DFC7;
+  --nav-button-background: #C8102E;
+  --nav-button-color: gold;
+}
+
+.ISU-header {
+  margin-bottom: 20px;
+}
+
+.heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  width: 90%;
+  margin: 0 auto 12px;
+  padding: 8px 16px;
+  border: 1.5px solid #E8DFC7;
+  border-radius: 12px;
+  background-color: #C8102E;
+  color: gold;
+  margin-top: 12px;
+}
+
+.heading-row h1 {
+  margin: 0;
+}
+
+.how-to-play-button {
+  padding: 8px 12px;
+  border: 0;
+  background: transparent;
+  font: bold 1rem sans-serif;
+  cursor: pointer;
+  color: gold;
+}
+
+.header-controls {
+  display: flex;
+  gap: 16px;
+}
+
+.ISU-game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  min-height: 450px;
+}
+
+.category-cell,
+.question-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #E8DFC7;
+  background-color: #C8102E;
+  color: gold;
+}
+
+.category-cell {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.question-cell {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.reset-button {
+  flex: 1;
+  padding: 12px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #C8102E;
+  color: gold;
+  border: 1.5px solid #E8DFC7;
+  border-radius: 10px;
+}
+
+.score-area {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+  gap: 16px;
+  padding: 8px;
+  border: 1.5px solid #E8DFC7;
+  background-color: #C8102E;
+  color: gold;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .header-controls {
+    flex-direction: column;
+  }
+
+  .score-area {
+    justify-content: space-between;
+  }
+
+  .heading-row {
+    width: 100%;
+    gap: 12px;
+  }
+}
+
+body {
+  background-color: #1D1D1F ;
+}
+
+/*Question pop ups*/
+#questionDialog { 
+  width: min(480px, calc(100% - 48px));
+  box-sizing: border-box;
+  border: 1.5px solid border-box;
+  border-radius: 12px;
+  padding: 24px;
+  background-color: #C8102E;
+  color: gold;
+  box-shadow: 012px 36x #0006;
+}
+
+#questionDialog::backdrop{
+  background: rgba(0, 0, 0, 0);
+}
+
+#questionDialog h2{
+  margin-top: 0;
+}
+
+#dialogQuestion{
+  line-height: 1.6;
+}
+
+.dialog-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.dialog-actions[hidden]{
+  display: none !important;
+}
+
+.dialog-footer{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.dialog-actions button, .dialog-footer button{
+  padding: 10px 14px;
+  border: 1px solid #E8DFC7;
+  border-radius: 8px;
+  background-color: #C8102E;
+  color: gold;
+  cursor: point;
+}
+
+.dialog-actions button:hover, .dialog-footer button:hover{
+  background-color: #C8102E;
+}
+
+.question-cell:hover:not(disabled){
+  background-color: #C8102E;
+}
+
+.question-cell disabled{
+  cursor: default;
+  opacity: .5;
+}
+
+.how-to-play-button:hover{
+  text-decoration: underline;
+}
+
+@media (max-width: 480){
+  .dialog-actions{
+    flex-direction: column;
+  }
+
+  dialog-action button{
+    width: 100%;
+  }
+}
+
+#revealAnswer{
+  margin-top: 12px;
+  padding: 10px 14px;
+  border: 1px solid #E8DFC7;
+  border-radius: 8px;
+  background-color: gold;
+  color: rgb(40, 8, 8);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#answerSection h3{
+  margin-bottom: 4px;
+}
+
+#answer-section .dialog-actions button{
+  flex: 1 1 140px;
+}
+
+#roundResult{
+  margin-top: 20px;
+  padding: 12px;
+  border: 1px solid #E8DFC7;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#roundResult[hidden],
+#answerSection[hidden] {
+  display: none;
+}
+
+#revealAnswer:hover {
+  background-color: #E8DFC7;
+}
+
+#answerSection .dialog-actions button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+#dialogAnswerImage{
+  display: block;
+  max-width: 100%;
+  max-height: 260px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 16px auto;
+  border-radius: 8px;
+}
+
+#displayImage[hidden]{
+  display: none;
+}
+
+.leaderboard-button {
+  padding: 12px 10px;
+  font-size: 20px;
+  background-color: #C8102E;
+  color: gold;
+  border: 1.5px solid #E8DFC7;
+  border-radius: 10px;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}

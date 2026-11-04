@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISU Jeopardy Board</title>
+  <link rel="stylesheet" href="../assets/ISU_Board.css">
+  <link rel="stylesheet" href="../assets/navbar.css">
+  <script src="ISU_Board.js" defer></script>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="../index.html">Home</a>
+    <a href="games.html">Games</a>
+    <details class="info-menu">
+      <summary>Info</summary>
+      <div class="info-links">
+        <a href="../author/authors.html">Creators</a>
+        <a href="../faq/faq.html">FAQ</a>
+      </div>
+    </details>
+  </nav>
+  <main class="ISU-shell">
+    <header class="ISU-header">
+      <div class="heading-row">
+        <h1 id="boardTitle"></h1>
+        <button id="howToPlay" class="how-to-play-button" type="button">How to Play?</button>
+      </div>
+      <div class="header-controls">
+        <div class="score-area" aria-label="Team scores">
+          <div class="score-card" aria-live="polite">
+            <span class="score-label">Team A:</span>
+            <strong id="team1Score">$0</strong>
+          </div>
+          <div class="score-card" aria-live="polite">
+            <span class="score-label">Team B:</span>
+            <strong id="team2Score">$0</strong>
+          </div>
+        </div>
+        <button id="newGame" class="reset-button" type="button">New Game</button>
+          <a id="leaderboard" class="leaderboard-button" href="leaderboard.html">Leaderboard</a>
+      </div>
+    </header>
+
+    <section id="ISU_gameBoard" class="ISU-game-board" aria-label="ISU Jeopardy board"></section>
+
+    <dialog id="questionDialog" aria-labelledby="dialogTitle">
+      <h2 id="dialogTitle"></h2>
+      <p id="dialogQuestion"></p>
+
+      <button id="revealAnswer" type="button">
+        Reveal Answer
+        </button>
+
+        <div id="answerSection" hidden>
+          <h3></h3>
+          <p id="dialogAnswer"></p>
+
+          <img id="dialogAnswerImage" src="" hidden>
+
+          <div class="dialog-actions">
+            <button id="awardTeamA" type="button">
+              Team A gets points
+            </button>
+
+            <button id="awardTeamB" type="button">
+              Team B gets points
+            </button>
+
+            <button id="noPoints" type="button">
+              No Points
+            </button>
+          </div>
+        </div>
+
+        <p id="roundResult" aria-live="polite" hidden></p>
+
+        <div class="dialog-footer">
+          <button id="closeDialog" type="button">
+            Close
+          </button>
+        </div>
+      </dialog>
+
+  </main>
+</body>
+</html>

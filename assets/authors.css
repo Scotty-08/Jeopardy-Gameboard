@@ -1,0 +1,34 @@
+body {
+  --nav-background: #000;
+  --nav-color: #45e08a;
+  --nav-border: #248eff;
+  --nav-button-background: #4da3ff;
+  --nav-button-color: #000;
+  margin: 0;
+  background: #000;
+  color: #45e08a;
+  font-family: Arial, sans-serif;
+}
+main {
+  width: 700px;
+  margin: 150px auto;
+}
+h1 {
+  font-size: 60px;
+}
+a {
+  color: #4da3ff;
+}
+.author {
+  margin: 20px 0;
+  padding: 16px;
+  border: 1px solid #45e08a;
+}
+.avatar {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  border: 1px solid #248eff;
+  border-radius: 50%;
+}

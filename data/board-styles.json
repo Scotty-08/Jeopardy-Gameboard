@@ -1,0 +1,20 @@
+{
+  "pageTitle": "Choose your style",
+  "styles": [
+    {
+      "gameId": "jeopardy",
+      "name": "ISU Board",
+      "link": "ISU_Board.html"
+    },
+    {
+      "gameId": "family-feud",
+      "name": "Family Feud style (coming soon)",
+      "link": null
+    },
+    {
+      "gameId": "maze",
+      "name": "Maze style (coming soon)",
+      "link": null
+    }
+  ]
+}

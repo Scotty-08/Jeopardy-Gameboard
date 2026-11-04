@@ -1,0 +1,11 @@
+{
+  "pageTitle": "Leaderboard",
+  "columns": ["Rank", "Score"],
+
+    "scores": [
+        { "score": 2400},
+        { "score": 2100},
+        { "score": 1800},
+        { "score": 1500}
+    ]
+}

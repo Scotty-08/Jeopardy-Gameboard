@@ -1,0 +1,29 @@
+body {
+  --nav-background: #000;
+  --nav-color: #45e08a;
+  --nav-border: #248eff;
+  --nav-button-background: #4da3ff;
+  --nav-button-color: #000;
+  margin: 0;
+  background: #000;
+  color: #45e08a;
+  font-family: Arial, sans-serif;
+}
+main {
+  margin: 150px auto;
+  text-align: center;
+}
+h1 {
+  margin-bottom: 32px;
+  font-size: 60px;
+}
+.choice-button {
+  padding: 12px 24px;
+  border: 1.5px solid #45e08a;
+  border-radius: 8px;
+  background: #4da3ff;
+  color: #000;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}

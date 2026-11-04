@@ -1,0 +1,18 @@
+{
+  "pageTitle": "Creators",
+  "course": "Construction of User Interfaces, Fall 2026",
+  "authors": [
+    {
+      "name": "Scott Gray",
+      "email": "sgray08@iastate.edu",
+      "initials": "SG",
+      "bio": "My name is Scott and I worked on the ISU Jeopardy board styling and the Board Games hub."
+    },
+    {
+      "name": "Kai Gasparovich",
+      "email": "gus22781@iastate.edu",
+      "initials": "KG",
+      "bio": "My name is Kai and I worked on the button pop up/image implementation, and the FAQ/author pages."
+    }
+  ]
+}

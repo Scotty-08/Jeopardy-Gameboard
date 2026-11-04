@@ -1,0 +1,54 @@
+body {
+  --nav-background: #C8102E;
+  --nav-color: gold;
+  --nav-border: #E8DFC7;
+  --nav-button-background: #C8102E;
+  --nav-button-color: gold;
+  margin: 0;
+  background: #1D1D1F;
+  color: gold;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  margin: 80px auto;
+  width: 80%;
+}
+
+h1 {
+  margin-bottom: 32px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  border: 1px solid #E8DFC7;
+  border-radius: 8px;
+  background: #C8102E;
+  color: gold;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #C8102E;
+  font-size: 20px;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 14px;
+  border: 1px solid #E8DFC7;
+  text-align: center;
+}
+
+.leaderboard-table th {
+  background: #C8102E;
+  color: gold;
+}

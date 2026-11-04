@@ -1,0 +1,37 @@
+{
+  "pageTitle": "FAQ",
+  "questions": [
+    {
+      "question": "What is Game Boards?",
+      "answer": "Game Boards is a hub for choosing and playing the games our team has created."
+    },
+    {
+      "question": "What game can I play right now?",
+      "answer": "Jeopardy is currently available."
+    },
+    {
+      "question": "Why did we choose to create the ISU board?",
+      "answer": "We thought that with this project we would create a fun outcome."
+    },
+    {
+      "question": "What is the ISU board about?",
+      "answer": "It is an Iowa State-themed Jeopardy game."
+    },
+    {
+      "question": "How many categories are on the board?",
+      "answer": "The board has four categories."
+    },
+    {
+      "question": "What are future plans for the Board Games hub?",
+      "answer": "We hope to implement more games in the future. Including mazes and Family Fued."
+    },
+    {
+      "question": "How many teams can play?",
+      "answer": "The board displays scores for Team A and Team B."
+    },
+    {
+      "question": "Are scores saved after I leave the game?",
+      "answer": "No. Scores reset when the page is refreshed."
+    }
+  ]
+}

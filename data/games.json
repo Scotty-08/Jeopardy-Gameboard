@@ -1,0 +1,17 @@
+{
+  "pageTitle": "What would you like to play?",
+  "games": [
+    {
+      "name": "Jeopardy",
+      "link": "board-styles.html?game=jeopardy"
+    },
+    {
+      "name": "Family Feud",
+      "link": "board-styles.html?game=family-feud"
+    },
+    {
+      "name": "Maze",
+      "link": "board-styles.html?game=maze"
+    }
+  ]
+}
