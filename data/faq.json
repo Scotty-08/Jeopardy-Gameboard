@@ -2,36 +2,44 @@
   "pageTitle": "FAQ",
   "questions": [
     {
-      "question": "What is Game Boards?",
-      "answer": "Game Boards is a hub for choosing and playing the games our team has created."
+      "question": "What is the ISU Game Hub?",
+      "answer": "It is a hub of Iowa State themed games that our team built for COM S 3190: Jeopardy, Quiz Blitz, Family Feud, Maze and Memory Match. Pick a game, pick a mode, and play."
     },
     {
-      "question": "What game can I play right now?",
-      "answer": "Jeopardy is currently available."
+      "question": "Which games can I play right now?",
+      "answer": "All five. Jeopardy has a host mode and a multiple-choice team mode, Quiz Blitz has a 60-second mode and Sudden Death, Family Feud has a 3-round and a 6-round match, Maze lets you play or watch a solver, and Memory Match has an easy and a hard board."
     },
     {
       "question": "Why did we choose to create the ISU board?",
-      "answer": "We thought that with this project we would create a fun outcome."
+      "answer": "We thought that with this project we would create a fun outcome, and an Iowa State themed game is something people on campus can enjoy."
     },
     {
-      "question": "What is the ISU board about?",
-      "answer": "It is an Iowa State-themed Jeopardy game."
-    },
-    {
-      "question": "How many categories are on the board?",
-      "answer": "The board has four categories."
-    },
-    {
-      "question": "What are future plans for the Board Games hub?",
-      "answer": "We hope to implement more games in the future. Including mazes and Family Fued."
+      "question": "How do XP and levels work?",
+      "answer": "Every finished game earns XP, and each level needs a little more XP than the last. One game each day is the featured game and pays double XP. Your level shows in the top bar."
     },
     {
       "question": "How many teams can play?",
-      "answer": "The board displays scores for Team A and Team B."
+      "answer": "Jeopardy and Family Feud are for two teams, Team A and Team B, taking turns on one screen. Quiz Blitz, Maze and Memory Match are single player."
+    },
+    {
+      "question": "How does Jeopardy multiple choice mode work?",
+      "answer": "Teams take turns picking a tile and answering from four choices. A right answer wins the tile's value and keeps control of the board. A wrong answer loses the value and passes control. One tile is a Daily Double where the team picks its own wager."
+    },
+    {
+      "question": "Are the Family Feud survey answers real?",
+      "answer": "No. The survey answers and their point values were made up for fun. They are not the result of a real survey."
     },
     {
       "question": "Are scores saved after I leave the game?",
-      "answer": "No. Scores reset when the page is refreshed."
+      "answer": "Yes. Scores, your level and your personal bests are saved in this browser on this device. They are not sent anywhere, and clearing your browser's site data resets them."
+    },
+    {
+      "question": "Can I turn off the sound or the animations?",
+      "answer": "Use the speaker button in the top bar to mute sound. If your device is set to reduce motion, the hub turns off the heavy animations on its own."
+    },
+    {
+      "question": "How do I add my own questions?",
+      "answer": "Jeopardy questions live in data/questions.json and the Quiz Blitz extras live in data/quiz.json. Add an entry with a correct answer and three wrong ones, and it shows up in the game."
     }
   ]
 }

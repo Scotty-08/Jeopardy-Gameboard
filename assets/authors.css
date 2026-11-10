@@ -1,34 +1,30 @@
-body {
-  --nav-background: #000;
-  --nav-color: #45e08a;
-  --nav-border: #248eff;
-  --nav-button-background: #4da3ff;
-  --nav-button-color: #000;
-  margin: 0;
-  background: #000;
-  color: #45e08a;
-  font-family: Arial, sans-serif;
-}
-main {
-  width: 700px;
-  margin: 150px auto;
-}
-h1 {
-  font-size: 60px;
-}
-a {
-  color: #4da3ff;
-}
-.author {
-  margin: 20px 0;
-  padding: 16px;
-  border: 1px solid #45e08a;
-}
+.authors-page { max-width: 980px; margin: 0 auto; padding: clamp(24px, 5vw, 56px) clamp(16px, 4vw, 30px) 80px; }
+.authors-page h1 { font-size: clamp(2.4rem, 6vw, 4rem); margin-bottom: 8px; }
+.sub { margin: 0 0 30px; color: var(--muted); font-size: 1.1rem; }
+
+.author-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; perspective: 1200px; }
+
+.author { padding: 28px 24px; text-align: center; }
 .avatar {
+  position: relative;
   display: grid;
-  width: 64px;
-  height: 64px;
   place-items: center;
-  border: 1px solid #248eff;
+  width: 92px;
+  height: 92px;
+  margin: 0 auto 16px;
   border-radius: 50%;
+  font: 900 1.9rem var(--display);
+  color: #2a1500;
+  background: linear-gradient(150deg, var(--gold-hot), var(--cardinal-hot));
 }
+.avatar::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 3px dashed rgba(241, 190, 72, 0.7);
+  animation: spin 14s linear infinite;
+}
+.author h2 { font-size: 1.6rem; margin-bottom: 4px; }
+.author p { margin: 6px 0; color: #ead9dc; }
+.author a { font-weight: 800; }

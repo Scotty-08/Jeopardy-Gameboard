@@ -1,37 +1,24 @@
-body {
-  --nav-background: rgb(54, 52, 52);
-  --nav-color: rgb(17, 155, 180);
-  --nav-border: #bbb;
-  --nav-button-background: #bbb;
-  --nav-button-color: rgb(17, 155, 180);
-  margin: 0;
-  background: black;
-  color: rgb(17, 155, 180);
-  font-family: Arial, sans-serif;
-}
-.accordion-button {
-  background-color: rgb(54, 52, 52);
-  color: rgb(17, 155, 180);
+.faq-page { max-width: 820px; margin: 0 auto; padding: clamp(24px, 5vw, 56px) clamp(16px, 4vw, 30px) 80px; }
+.faq-page h1 { font-size: clamp(2.4rem, 6vw, 4rem); margin-bottom: 26px; }
+
+.accordion { display: grid; gap: 12px; }
+.accordion-item { border: 1px solid var(--stroke); border-radius: 16px; background: var(--panel); overflow: hidden; transition: border-color 0.25s, background 0.25s; }
+.accordion-item[open] { border-color: rgba(241, 190, 72, 0.6); background: var(--panel-strong); }
+
+.accordion-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
   cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: background-color 0.3s ease;
+  list-style: none;
+  font-weight: 800;
+  font-size: 1.05rem;
 }
-.accordion-button:focus {
-  box-shadow: none;
-}
-main {
-  width: 800px;
-  margin: 80px auto;
-}
-a {
-  color: #222;
-}
-h1 {
-  margin: 24px 0;
-  font-size: 40px;
-}
+.accordion-item summary::-webkit-details-marker { display: none; }
+.accordion-item summary::after { content: "+"; flex: none; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(180deg, var(--cardinal-hot), var(--cardinal)); font-size: 1.3rem; transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.accordion-item[open] summary::after { transform: rotate(135deg); background: linear-gradient(180deg, var(--gold-hot), #d99a12); color: #2a1500; }
+.accordion-item summary:hover { color: var(--gold-hot); }
+
+.accordion-body { padding: 0 20px 20px; color: #ead9dc; line-height: 1.65; }

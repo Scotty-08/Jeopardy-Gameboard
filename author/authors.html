@@ -2,27 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Creators</title>
+  <link rel="stylesheet" href="../assets/hub.css">
   <link rel="stylesheet" href="../assets/authors.css">
-  <link rel="stylesheet" href="../assets/navbar.css">
+  <script src="../assets/hub.js" defer></script>
   <script src="authors.js" defer></script>
 </head>
 <body>
   <nav class="site-nav" aria-label="Main navigation">
     <a href="../index.html">Home</a>
     <a href="../content/games.html">Games</a>
+    <a href="../content/leaderboard.html">Leaderboard</a>
     <details class="info-menu">
       <summary>Info</summary>
       <div class="info-links">
-        <a href="authors.html">Creators</a>
+        <a href="authors.html" aria-current="page">Creators</a>
         <a href="../faq/faq.html">FAQ</a>
       </div>
     </details>
   </nav>
-  <main>
-    <h1 id="pageTitle"></h1>
-    <p id="courseName"></p>
-    <section id="authors" aria-label="Project creators"></section>
+  <main class="authors-page">
+    <h1 class="title" id="pageTitle">Creators</h1>
+    <p class="sub" id="courseName"></p>
+    <section id="authors" class="author-grid" aria-label="Project creators"></section>
   </main>
 </body>
 </html>
