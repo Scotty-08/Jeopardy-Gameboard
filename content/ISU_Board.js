@@ -56,6 +56,7 @@ let answered = 0;
 let totalTiles = 0;
 let gameSaved = false;
 let dailyDoubleId = null;
+let opening = false;      // true while the Daily Double banner plays before the dialog opens
 
 // The question that is currently open.
 let currentQuestion = null;
@@ -198,14 +199,26 @@ function openQuestion(category, question, tile) {
     closeDialogButton.hidden = true;
   }
 
+  if (tile.dataset.questionId === dailyDoubleId) {
+    // The banner plays over the board first, because an open dialog would cover it.
+    opening = true;
+    Hub.sfx.play("level");
+    Hub.flash("#f1be48", 600);
+    Hub.banner("DAILY DOUBLE", "Wager up to your score", "#F1BE48");
+    Hub.fx.cannons();
+    setTimeout(() => {
+      opening = false;
+      if (!currentQuestion) return;
+      questionDialog.showModal();
+      morphFrom(tile);
+      startDailyDouble();
+    }, 1500);
+    return;
+  }
+
   if (!questionDialog.open) questionDialog.showModal();
   morphFrom(tile);
-
-  if (tile.dataset.questionId === dailyDoubleId) {
-    startDailyDouble();
-  } else {
-    beginQuestion();
-  }
+  beginQuestion();
 }
 
 // Shows the question: choices and a timer in choice mode, a reveal button in host mode.
@@ -222,11 +235,6 @@ function beginQuestion() {
 }
 
 function startDailyDouble() {
-  Hub.sfx.play("level");
-  Hub.flash("#f1be48", 600);
-  Hub.banner("DAILY DOUBLE", "Wager up to your score", "#F1BE48");
-  Hub.fx.cannons();
-
   const own = mode === "choice" ? teamScores[turn] : Math.max(teamScores.A, teamScores.B);
   const cap = Math.max(400, Math.ceil(Math.max(0, own) / 100) * 100);
   wagerRange.max = String(cap);
@@ -498,7 +506,7 @@ function renderBoard() {
         tile.setAttribute("aria-label", category.name + " for $" + value);
         Hub.tilt(tile, 8);
         tile.addEventListener("click", () => {
-          if (questionDialog.open || tile.dataset.done) return;
+          if (questionDialog.open || opening || tile.dataset.done) return;
           Hub.sfx.play("pop");
           openQuestion(category.name, question, tile);
         });
