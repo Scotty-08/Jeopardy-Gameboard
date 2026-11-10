@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Feud</title>
+  <link rel="stylesheet" href="../assets/hub.css">
+  <link rel="stylesheet" href="../assets/feud.css">
+  <script src="../assets/hub.js" defer></script>
+  <script src="feud.js" defer></script>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="../index.html">Home</a>
+    <a href="games.html">Games</a>
+    <a href="leaderboard.html">Leaderboard</a>
+    <details class="info-menu">
+      <summary>Info</summary>
+      <div class="info-links">
+        <a href="../author/authors.html">Creators</a>
+        <a href="../faq/faq.html">FAQ</a>
+      </div>
+    </details>
+  </nav>
+
+  <main class="feud">
+    <section id="start" class="panel">
+      <h1 id="feudTitle" class="title">Family Feud</h1>
+      <p class="lead">Two teams, one keyboard. Survey says!</p>
+      <ul class="rules" id="rules"></ul>
+      <button id="go" class="btn gold big" type="button">Start the match</button>
+    </section>
+
+    <section id="game" hidden>
+      <header class="top">
+        <div class="team-card team-a" id="cardA"><span>Team A</span><b id="scoreA">0</b></div>
+        <div class="round-info">
+          <span class="chip hot" id="roundChip">Round 1</span>
+          <div class="bank"><span>Bank</span><b id="bank">0</b></div>
+        </div>
+        <div class="team-card team-b" id="cardB"><span>Team B</span><b id="scoreB">0</b></div>
+      </header>
+
+      <div class="panel survey">
+        <h2 id="question"></h2>
+        <ol id="slots" class="slots" aria-label="Survey answers"></ol>
+        <div id="strikes" class="strikes" aria-label="Strikes"><i></i><i></i><i></i></div>
+      </div>
+
+      <form id="guessForm" class="guess" autocomplete="off">
+        <label id="prompt" for="guess"></label>
+        <div class="guess-row">
+          <input id="guess" type="text" maxlength="60" placeholder="Type your answer..." enterkeyhint="send">
+          <button class="btn gold" id="submit" type="submit">Guess</button>
+        </div>
+        <p id="hint" class="hint" aria-live="polite"></p>
+      </form>
+
+      <div class="next-row"><button id="next" class="btn" type="button" hidden>Next round</button></div>
+    </section>
+
+    <div id="xmark" class="xmark" aria-hidden="true" hidden></div>
+
+    <section id="end" class="panel end" hidden>
+      <p class="kicker">Final survey says</p>
+      <h2 id="endTitle" class="title"></h2>
+      <div class="end-scores">
+        <div class="team-card team-a" id="endA"><span>Team A</span><b>0</b></div>
+        <div class="team-card team-b" id="endB"><span>Team B</span><b>0</b></div>
+      </div>
+      <p class="lead" id="endNote"></p>
+      <div class="actions">
+        <button id="again" class="btn gold" type="button">Play again</button>
+        <a id="endBoard" class="btn" href="leaderboard.html?game=feud">Leaderboard</a>
+        <a class="btn ghost" href="games.html">All games</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

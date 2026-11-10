@@ -1,0 +1,92 @@
+{
+  "note": "These surveys are made up for fun. Points are out of 100. Aliases are extra phrases that count as a match.",
+  "rounds": [
+    {
+      "question": "Name something a college student always forgets to bring to class.",
+      "answers": [
+        { "text": "Pen or pencil", "points": 32, "aliases": ["pen", "pens", "pencil", "pencils", "writing utensil"] },
+        { "text": "Charger", "points": 24, "aliases": ["phone charger", "laptop charger", "cord", "cable"] },
+        { "text": "Notebook", "points": 17, "aliases": ["paper", "notes", "binder", "notepad"] },
+        { "text": "Laptop", "points": 12, "aliases": ["computer", "macbook"] },
+        { "text": "Water bottle", "points": 8, "aliases": ["water", "drink"] },
+        { "text": "Calculator", "points": 7, "aliases": ["calc"] }
+      ]
+    },
+    {
+      "question": "Name a place on campus where students go to study.",
+      "answers": [
+        { "text": "Library", "points": 38, "aliases": ["parks library", "parks", "the library"] },
+        { "text": "Dorm room", "points": 18, "aliases": ["dorm", "dorms", "residence hall", "my room", "room", "apartment", "home"] },
+        { "text": "Coffee shop", "points": 15, "aliases": ["cafe", "starbucks", "coffee", "caribou"] },
+        { "text": "Student union", "points": 14, "aliases": ["memorial union", "mu", "union"] },
+        { "text": "Outside", "points": 10, "aliases": ["quad", "lawn", "outdoors", "the lawn", "park"] },
+        { "text": "Empty classroom", "points": 5, "aliases": ["classroom", "class room", "lecture hall"] }
+      ]
+    },
+    {
+      "question": "Name something you would see at a football tailgate.",
+      "answers": [
+        { "text": "Grill", "points": 30, "aliases": ["grills", "bbq", "barbecue", "burgers", "brats", "hot dogs"] },
+        { "text": "Team gear", "points": 22, "aliases": ["jerseys", "jersey", "shirts", "red and gold", "cardinal and gold", "clothes", "apparel", "face paint"] },
+        { "text": "Drinks", "points": 18, "aliases": ["beer", "cooler", "beverages", "soda", "coolers"] },
+        { "text": "Music", "points": 12, "aliases": ["speakers", "speaker", "radio"] },
+        { "text": "Cornhole", "points": 10, "aliases": ["bags", "bean bag toss", "bean bags", "beanbag", "games"] },
+        { "text": "Tent", "points": 8, "aliases": ["tents", "canopy", "pop up tent"] }
+      ]
+    },
+    {
+      "question": "Name a reason a student stays up past 2 a.m.",
+      "answers": [
+        { "text": "Homework", "points": 36, "aliases": ["studying", "study", "assignment", "project", "exam", "cramming", "paper", "essay", "work", "finals"] },
+        { "text": "Video games", "points": 20, "aliases": ["gaming", "games", "playing games", "xbox", "playstation"] },
+        { "text": "Scrolling on a phone", "points": 16, "aliases": ["phone", "social media", "tiktok", "instagram", "scrolling", "doomscrolling"] },
+        { "text": "Hanging out with friends", "points": 14, "aliases": ["friends", "party", "partying", "talking", "hanging out", "socializing"] },
+        { "text": "Watching shows", "points": 9, "aliases": ["netflix", "tv", "movies", "youtube", "streaming", "binge watching"] },
+        { "text": "Late night snack", "points": 5, "aliases": ["food", "snacks", "pizza", "eating", "hungry"] }
+      ]
+    },
+    {
+      "question": "Name something you would find in a computer engineering student's backpack.",
+      "answers": [
+        { "text": "Laptop", "points": 34, "aliases": ["computer", "macbook", "notebook computer"] },
+        { "text": "Charger", "points": 22, "aliases": ["cable", "cord", "power cord", "usb cable", "phone charger"] },
+        { "text": "Notebook", "points": 14, "aliases": ["notes", "paper", "binder", "notepad"] },
+        { "text": "Energy drink", "points": 12, "aliases": ["red bull", "monster", "caffeine", "coffee", "soda"] },
+        { "text": "Calculator", "points": 10, "aliases": ["calc", "graphing calculator"] },
+        { "text": "Circuit parts", "points": 8, "aliases": ["breadboard", "arduino", "wires", "resistors", "raspberry pi", "multimeter", "chips"] }
+      ]
+    },
+    {
+      "question": "Name a way people get around campus.",
+      "answers": [
+        { "text": "Bike", "points": 40, "aliases": ["bicycle", "bikes", "biking", "cycling"] },
+        { "text": "Bus", "points": 24, "aliases": ["cyride", "transit", "shuttle", "buses"] },
+        { "text": "Walking", "points": 18, "aliases": ["walk", "on foot", "feet", "foot"] },
+        { "text": "Scooter", "points": 10, "aliases": ["electric scooter", "skateboard", "longboard", "e scooter", "escooter"] },
+        { "text": "Car", "points": 8, "aliases": ["drive", "driving", "uber", "carpool"] }
+      ]
+    },
+    {
+      "question": "Name a food students eat when they are broke.",
+      "answers": [
+        { "text": "Ramen", "points": 38, "aliases": ["noodles", "instant noodles", "cup noodles", "cup of noodles", "top ramen"] },
+        { "text": "Pizza", "points": 20, "aliases": ["frozen pizza", "pizza rolls"] },
+        { "text": "Mac and cheese", "points": 16, "aliases": ["mac n cheese", "macaroni", "kraft", "macaroni and cheese", "mac"] },
+        { "text": "Cereal", "points": 12, "aliases": ["cereals", "cheerios"] },
+        { "text": "Peanut butter and jelly", "points": 9, "aliases": ["pb and j", "pbj", "peanut butter", "sandwich", "pb&j"] },
+        { "text": "Rice", "points": 5, "aliases": ["rice and beans", "beans"] }
+      ]
+    },
+    {
+      "question": "Name something Iowa is famous for.",
+      "answers": [
+        { "text": "Corn", "points": 42, "aliases": ["cornfields", "corn fields", "maize", "farms", "farming", "agriculture"] },
+        { "text": "Pigs", "points": 18, "aliases": ["hogs", "pork", "swine", "pig", "bacon"] },
+        { "text": "Caucuses", "points": 14, "aliases": ["caucus", "politics", "election", "elections", "iowa caucus"] },
+        { "text": "State fair", "points": 12, "aliases": ["butter cow", "the fair", "fair", "fried food on a stick"] },
+        { "text": "Field of Dreams", "points": 8, "aliases": ["baseball", "movie", "if you build it", "dyersville"] },
+        { "text": "Wrestling", "points": 6, "aliases": ["wrestlers", "hawkeyes", "cyclones"] }
+      ]
+    }
+  ]
+}
