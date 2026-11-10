@@ -4,37 +4,37 @@
     {
       "name": "Campus Places",
       "questions": [
-        { "id": "places-100", "value": 100, "question": "This building is home to Iowa State's iconic campanile.", "answer": "What is the Campanile?", "image": "../assets/images/campanile.jpg"},
-        { "id": "places-200", "value": 200, "question": "This museum on campus is known for its extensive collection of art.", "answer": "What is the Brunnier Art Museum?", "image": "../assets/images/brunnier.jpg"},
-        { "id": "places-300", "value": 300, "question": "This garden on campus includes a conservatory and outdoor gardens.", "answer": "What is Reiman Gardens?", "image": "../assets/images/reiman.jpg" },
-        { "id": "places-400", "value": 400, "question": "This named indoor attraction at Reiman Gardens is home to hundreds of live butterflies.", "answer": "What is the Christina Reiman Butterfly Wing?", "image": "../assets/images/butterflywing.jpg" }
+        { "id": "places-100", "value": 100, "question": "Iowa State's most iconic landmark is this bell tower, home to the Stanton Memorial Carillon.", "answer": "What is the Campanile?", "correct": "The Campanile", "wrong": ["Beardshear Hall", "Parks Library", "Hilton Coliseum"], "image": "../assets/images/campanile.jpg" },
+        { "id": "places-200", "value": 200, "question": "This museum on campus is known for its extensive collection of art.", "answer": "What is the Brunnier Art Museum?", "correct": "The Brunnier Art Museum", "wrong": ["The Cy Gallery of Modern Art", "The Lincoln Way Art Center", "The Ames Fine Arts Hall"], "image": "../assets/images/brunnier.jpg" },
+        { "id": "places-300", "value": 300, "question": "This garden on campus includes a conservatory and outdoor gardens.", "answer": "What is Reiman Gardens?", "correct": "Reiman Gardens", "wrong": ["Brookside Gardens", "The Ada Hayden Arboretum", "The Campus Prairie Conservatory"], "image": "../assets/images/reiman.jpg" },
+        { "id": "places-400", "value": 400, "question": "This named indoor attraction at Reiman Gardens is home to hundreds of live butterflies.", "answer": "What is the Christina Reiman Butterfly Wing?", "correct": "The Christina Reiman Butterfly Wing", "wrong": ["The Prairie Dome", "The Cardinal Greenhouse", "The Monarch Pavilion"], "image": "../assets/images/butterflywing.jpg" }
       ]
     },
     {
       "name": "Iowa",
       "questions": [
-        { "id": "iowa-100", "value": 100, "question": "This is the capital city of Iowa.", "answer": "What is Des Moines?", "image": "../assets/images/dsm.jpg" },
-        { "id": "iowa-200", "value": 200, "question": "Iowa is bordered by this river to the east.", "answer": "What is the Mississippi River?", "image": "../assets/images/river.jpg"},
-        { "id": "iowa-300", "value": 300, "question": "This nickname refers to Iowa's rolling agricultural landscape.", "answer": "What is the Hawkeye State?", "image": "../assets/images/hawkeye.jpg" },
-        { "id": "iowa-400", "value": 400, "question": "Iowa became this numbered state in the Union in 1846.", "answer": "What is the 29th state?", "image": "../assets/images/29.jpg" }
+        { "id": "iowa-100", "value": 100, "question": "This is the capital city of Iowa.", "answer": "What is Des Moines?", "correct": "Des Moines", "wrong": ["Cedar Rapids", "Iowa City", "Davenport"], "image": "../assets/images/dsm.jpg" },
+        { "id": "iowa-200", "value": 200, "question": "Iowa is bordered by this river to the east.", "answer": "What is the Mississippi River?", "correct": "The Mississippi River", "wrong": ["The Missouri River", "The Des Moines River", "The Cedar River"], "image": "../assets/images/river.jpg" },
+        { "id": "iowa-300", "value": 300, "question": "Iowa goes by this official state nickname.", "answer": "What is the Hawkeye State?", "correct": "The Hawkeye State", "wrong": ["The Buckeye State", "The Badger State", "The Gopher State"], "image": "../assets/images/hawkeye.jpg" },
+        { "id": "iowa-400", "value": 400, "question": "Iowa became this numbered state in the Union in 1846.", "answer": "What is the 29th state?", "correct": "The 29th state", "wrong": ["The 20th state", "The 25th state", "The 33rd state"], "image": "../assets/images/29.jpg" }
       ]
     },
     {
       "name": "Cyclone Spirit",
       "questions": [
-        { "id": "spirit-100", "value": 100, "question": "Iowa State's teams are known by this name.", "answer": "What are the Cyclones?", "image": "../assets/images/cyclones.jpg" },
-        { "id": "spirit-200", "value": 200, "question": "This is the name of Iowa State's mascot, a cardinal.", "answer": "Who is Cy?", "image": "../assets/images/cy.jpg" },
-        { "id": "spirit-300", "value": 300, "question": "Iowa State's school colors are cardinal and this color.", "answer": "What is gold?", "image": "../assets/images/gold.jpg" },
-        { "id": "spirit-400", "value": 400, "question": "Since a cyclone is hard to show as a costume, this bird was chosen as Iowa State's mascot.", "answer": "What is a cardinal?", "image": "../assets/images/cardinal.jpg" }
+        { "id": "spirit-100", "value": 100, "question": "Iowa State's teams are known by this name.", "answer": "What are the Cyclones?", "correct": "The Cyclones", "wrong": ["The Hawkeyes", "The Panthers", "The Bulldogs"], "image": "../assets/images/cyclones.png" },
+        { "id": "spirit-200", "value": 200, "question": "Iowa State's mascot is a cardinal with this short name.", "answer": "Who is Cy?", "correct": "Cy", "wrong": ["Herky", "Cyclo", "Big Red"], "image": "../assets/images/cy.jpg" },
+        { "id": "spirit-300", "value": 300, "question": "Iowa State's school colors are cardinal and this color.", "answer": "What is gold?", "correct": "Gold", "wrong": ["Silver", "Navy", "Black"], "image": "../assets/images/gold.jpg" },
+        { "id": "spirit-400", "value": 400, "question": "Cy, the Iowa State mascot, is this type of bird.", "answer": "What is a cardinal?", "correct": "A cardinal", "wrong": ["A hawk", "An eagle", "A blue jay"], "image": "../assets/images/cardinal.jpg" }
       ]
     },
     {
       "name": "Science & Tech",
       "questions": [
-        { "id": "science-100", "value": 100, "question": "This instrument measures temperature.", "answer": "What is a thermometer?", "image": "../assets/images/thermometer.jpg" },
-        { "id": "science-200", "value": 200, "question": "This planet is best known for its large rings.", "answer": "What is Saturn?", "image": "../assets/images/saturn.jpg" },
-        { "id": "science-300", "value": 300, "question": "This type of energy comes from sunlight.", "answer": "What is solar energy?", "image": "../assets/images/solar.jpg" },
-        { "id": "science-400", "value": 400, "question": "This branch of science studies matter, energy, and how they interact.", "answer": "What is physics?", "image": "../assets/images/physics.jpg" }
+        { "id": "science-100", "value": 100, "question": "This instrument measures temperature.", "answer": "What is a thermometer?", "correct": "A thermometer", "wrong": ["A barometer", "A hygrometer", "An anemometer"], "image": "../assets/images/thermometer.jpg" },
+        { "id": "science-200", "value": 200, "question": "This planet is best known for its large rings.", "answer": "What is Saturn?", "correct": "Saturn", "wrong": ["Mars", "Venus", "Mercury"], "image": "../assets/images/saturn.jpg" },
+        { "id": "science-300", "value": 300, "question": "This type of energy comes from sunlight.", "answer": "What is solar energy?", "correct": "Solar energy", "wrong": ["Wind energy", "Geothermal energy", "Nuclear energy"], "image": "../assets/images/solar.jpg" },
+        { "id": "science-400", "value": 400, "question": "This branch of science studies matter, energy, and how they interact.", "answer": "What is physics?", "correct": "Physics", "wrong": ["Chemistry", "Biology", "Geology"], "image": "../assets/images/physics.jpg" }
       ]
     }
   ]

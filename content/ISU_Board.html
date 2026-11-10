@@ -4,14 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ISU Jeopardy Board</title>
+  <link rel="stylesheet" href="../assets/hub.css">
   <link rel="stylesheet" href="../assets/ISU_Board.css">
-  <link rel="stylesheet" href="../assets/navbar.css">
+  <script src="../assets/hub.js" defer></script>
   <script src="ISU_Board.js" defer></script>
 </head>
 <body>
   <nav class="site-nav" aria-label="Main navigation">
     <a href="../index.html">Home</a>
     <a href="games.html">Games</a>
+    <a href="leaderboard.html">Leaderboard</a>
     <details class="info-menu">
       <summary>Info</summary>
       <div class="info-links">
@@ -20,68 +22,100 @@
       </div>
     </details>
   </nav>
+
   <main class="ISU-shell">
     <header class="ISU-header">
       <div class="heading-row">
-        <h1 id="boardTitle"></h1>
-        <button id="howToPlay" class="how-to-play-button" type="button">How to Play?</button>
+        <h1 id="boardTitle" class="title">ISU Jeopardy</h1>
+        <span class="chip hot" id="modeChip">Host mode</span>
+        <button id="howToPlay" class="btn ghost" type="button">How to Play?</button>
       </div>
       <div class="header-controls">
         <div class="score-area" aria-label="Team scores">
-          <div class="score-card" aria-live="polite">
-            <span class="score-label">Team A:</span>
+          <div class="score-card team-a" id="cardA" aria-live="polite">
+            <span class="score-label">Team A</span>
             <strong id="team1Score">$0</strong>
           </div>
-          <div class="score-card" aria-live="polite">
-            <span class="score-label">Team B:</span>
+          <div class="score-card team-b" id="cardB" aria-live="polite">
+            <span class="score-label">Team B</span>
             <strong id="team2Score">$0</strong>
           </div>
         </div>
-        <button id="newGame" class="reset-button" type="button">New Game</button>
-          <a id="leaderboard" class="leaderboard-button" href="leaderboard.html">Leaderboard</a>
+        <div class="header-buttons">
+          <button id="newGame" class="btn gold" type="button">New Game</button>
+          <a id="leaderboard" class="btn ghost" href="leaderboard.html?game=jeopardy">Leaderboard</a>
+        </div>
       </div>
+      <p class="turn-banner" id="turnBanner" aria-live="polite" hidden></p>
     </header>
 
     <section id="ISU_gameBoard" class="ISU-game-board" aria-label="ISU Jeopardy board"></section>
 
     <dialog id="questionDialog" aria-labelledby="dialogTitle">
-      <h2 id="dialogTitle"></h2>
+      <div class="q-top">
+        <span class="chip" id="qCat"></span>
+        <span class="q-val" id="qVal"></span>
+        <span class="chip hot" id="qTurn" hidden></span>
+      </div>
+      <div class="timer" id="qTimer" role="timer" aria-label="Time left"><i></i><b id="qSeconds"></b></div>
+      <h2 id="dialogTitle" class="sr-only"></h2>
       <p id="dialogQuestion"></p>
 
-      <button id="revealAnswer" type="button">
-        Reveal Answer
-        </button>
-
-        <div id="answerSection" hidden>
-          <h3></h3>
-          <p id="dialogAnswer"></p>
-
-          <img id="dialogAnswerImage" src="" hidden>
-
-          <div class="dialog-actions">
-            <button id="awardTeamA" type="button">
-              Team A gets points
-            </button>
-
-            <button id="awardTeamB" type="button">
-              Team B gets points
-            </button>
-
-            <button id="noPoints" type="button">
-              No Points
-            </button>
-          </div>
+      <div id="wagerBox" class="wager" hidden>
+        <p class="wager-note">Daily Double! Choose a wager up to <b id="wagerMax"></b>.</p>
+        <div class="wager-row">
+          <input id="wagerRange" type="range" min="100" max="400" step="100" value="200" aria-label="Wager">
+          <output id="wagerOut" for="wagerRange">$200</output>
         </div>
+        <button id="lockWager" class="btn gold" type="button">Lock in wager</button>
+      </div>
 
-        <p id="roundResult" aria-live="polite" hidden></p>
+      <div id="choices" class="choices" role="group" aria-label="Answer choices" hidden></div>
 
-        <div class="dialog-footer">
-          <button id="closeDialog" type="button">
-            Close
-          </button>
+      <button id="revealAnswer" class="btn gold" type="button">Reveal Answer</button>
+
+      <div id="answerSection" hidden>
+        <h3>Answer</h3>
+        <p id="dialogAnswer"></p>
+        <img id="dialogAnswerImage" src="" alt="" hidden>
+        <div class="dialog-actions">
+          <button id="awardTeamA" class="btn" type="button">Team A gets points</button>
+          <button id="awardTeamB" class="btn" type="button">Team B gets points</button>
+          <button id="noPoints" class="btn ghost" type="button">No Points</button>
         </div>
-      </dialog>
+      </div>
 
+      <p id="roundResult" aria-live="polite" hidden></p>
+
+      <div class="dialog-footer">
+        <button id="closeDialog" class="btn ghost" type="button">Close</button>
+      </div>
+    </dialog>
+
+    <dialog id="helpDialog" aria-labelledby="helpTitle">
+      <div class="help">
+        <h2 id="helpTitle">How to Play</h2>
+        <ul id="helpList"></ul>
+        <div class="dialog-footer"><button id="helpClose" class="btn gold" type="button">Got it</button></div>
+      </div>
+    </dialog>
+
+    <dialog id="finaleDialog" aria-labelledby="finaleTitle">
+      <div class="finale">
+        <p class="finale-kicker">Game over</p>
+        <h2 id="finaleTitle" class="title"></h2>
+        <div class="finale-scores">
+          <div class="finale-team team-a"><span>Team A</span><b id="finalA">$0</b></div>
+          <div class="finale-team team-b"><span>Team B</span><b id="finalB">$0</b></div>
+        </div>
+        <p id="finaleNote" class="finale-note"></p>
+        <div class="dialog-footer finale-actions">
+          <button id="playAgain" class="btn gold" type="button">Play again</button>
+          <a id="finaleBoard" class="btn" href="leaderboard.html?game=jeopardy">Leaderboard</a>
+          <a class="btn ghost" href="games.html">All games</a>
+        </div>
+      </div>
+    </dialog>
   </main>
 </body>
 </html>
