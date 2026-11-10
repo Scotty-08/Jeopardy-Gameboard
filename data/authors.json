@@ -1,12 +1,12 @@
 {
   "pageTitle": "Creators",
-  "intro": "The ISU Game Hub is built by Scott Gray.",
+  "intro": "GameHub is built by Scott Gray.",
   "hub": [
     {
       "name": "Scott Gray",
       "email": "sgray08@iastate.edu",
       "initials": "SG",
-      "bio": "I built the ISU Game Hub: the landing page, the animation engine, XP and leaderboards, and the Quiz Blitz, Family Feud, Maze and Memory Match games."
+      "bio": "I built GameHub: the landing page, the animation engine, XP and leaderboards, and the Quiz Blitz, Family Feud, Maze and Memory Match games."
     }
   ],
   "boardTitle": "ISU Jeopardy board",
