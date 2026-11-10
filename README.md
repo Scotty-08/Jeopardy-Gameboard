@@ -1,8 +1,8 @@
-# MS_16: ISU Game Hub
+# ISU Game Hub
 
-A game hub for Iowa State fans. Five games, each with more than one way to play, plus XP, levels and leaderboards.
+A game hub for Iowa State fans, built by Scott Gray (sgray08@iastate.edu). Five games, each with more than one way to play, plus XP, levels and leaderboards.
 
-- Scott Gray (sgray08@iastate.edu) and Kai Gasparovich (gus22781@iastate.edu)
+**ISU Jeopardy board:** the Jeopardy game started as the COM S 3190 team project for team MS_16, by Scott Gray (sgray08@iastate.edu) and Kai Gasparovich (gus22781@iastate.edu). The rest of the hub grew out of it.
 
 ## What is in the hub
 
