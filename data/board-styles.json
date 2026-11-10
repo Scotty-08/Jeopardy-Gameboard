@@ -1,20 +1,85 @@
 {
-  "pageTitle": "Choose your style",
+  "pageTitle": "Choose your mode",
   "styles": [
     {
       "gameId": "jeopardy",
       "name": "ISU Board",
+      "icon": "🎤",
+      "badge": "Host mode",
+      "description": "The classic. Someone reads the clue, the teams shout, and the host awards the points.",
       "link": "ISU_Board.html"
     },
     {
-      "gameId": "family-feud",
-      "name": "Family Feud style (coming soon)",
-      "link": null
+      "gameId": "jeopardy",
+      "name": "Multiple Choice Board",
+      "icon": "🔤",
+      "badge": "Team turns",
+      "description": "Teams take turns picking answers. Right answers score, wrong ones cost you, and a Daily Double is hiding on the board.",
+      "link": "ISU_Board.html?mode=choice"
+    },
+    {
+      "gameId": "blitz",
+      "name": "60-Second Blitz",
+      "icon": "⏱️",
+      "badge": "Timed",
+      "description": "Answer as many multiple-choice questions as you can in a minute. Streaks multiply your points.",
+      "link": "blitz.html?mode=blitz"
+    },
+    {
+      "gameId": "blitz",
+      "name": "Sudden Death",
+      "icon": "💀",
+      "badge": "One life",
+      "description": "No clock to beat, but one wrong answer ends the run. How far can your streak go?",
+      "link": "blitz.html?mode=sudden"
+    },
+    {
+      "gameId": "feud",
+      "name": "Quick Match",
+      "icon": "🔥",
+      "badge": "3 rounds",
+      "description": "Three survey rounds between two teams. Fast, loud, and over before the pizza gets cold.",
+      "link": "feud.html?rounds=3"
+    },
+    {
+      "gameId": "feud",
+      "name": "Full Match",
+      "icon": "🏟️",
+      "badge": "6 rounds",
+      "description": "Six rounds of surveys with later rounds worth more. The steal decides everything.",
+      "link": "feud.html?rounds=6"
     },
     {
       "gameId": "maze",
-      "name": "Maze style (coming soon)",
-      "link": null
+      "name": "Cy's Maze Run",
+      "icon": "🐦",
+      "badge": "Play",
+      "description": "Steer Cy through mazes that grow every level. Grab gold, beat the timer, reach the portal.",
+      "link": "maze.html?mode=run"
+    },
+    {
+      "gameId": "maze",
+      "name": "Watch the Solver",
+      "icon": "🤖",
+      "badge": "Watch",
+      "description": "Generate a maze and watch breadth-first search, depth-first search or A* race to the finish.",
+      "link": "maze.html?mode=solver"
+    },
+    {
+      "gameId": "memory",
+      "name": "Easy 4×4",
+      "icon": "🌱",
+      "badge": "8 pairs",
+      "description": "Eight campus pairs and plenty of time. A good warm-up.",
+      "link": "memory.html?size=easy"
+    },
+    {
+      "gameId": "memory",
+      "name": "Hard 6×4 with Timer",
+      "icon": "🌪️",
+      "badge": "12 pairs",
+      "description": "Twelve pairs, a ticking clock, and combo bonuses for chaining matches.",
+      "link": "memory.html?size=hard"
     }
   ]
 }

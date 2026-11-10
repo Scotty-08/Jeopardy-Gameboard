@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Choose Your Style</title>
-  <link rel="stylesheet" href="../assets/board-styles.css">
-  <link rel="stylesheet" href="../assets/navbar.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Choose Your Mode</title>
+  <link rel="stylesheet" href="../assets/hub.css">
+  <link rel="stylesheet" href="../assets/games.css">
+  <script src="../assets/hub.js" defer></script>
   <script src="board-styles.js" defer></script>
 </head>
 <body>
   <nav class="site-nav" aria-label="Main navigation">
     <a href="../index.html">Home</a>
-    <a href="games.html">Games</a>
+    <a href="games.html" aria-current="page">Games</a>
+    <a href="leaderboard.html">Leaderboard</a>
     <details class="info-menu">
       <summary>Info</summary>
       <div class="info-links">
@@ -19,9 +22,16 @@
       </div>
     </details>
   </nav>
-  <main>
-    <h1 id="pageTitle"></h1>
-    <section id="styleList" class="button-list" aria-label="Available board styles" aria-live="polite"></section>
+  <main class="page">
+    <a class="back" href="games.html">&larr; All games</a>
+    <header class="page-head game-head" id="gameHead">
+      <span class="orb big" id="gameIcon" aria-hidden="true"></span>
+      <div>
+        <h1 class="title" id="pageTitle">Choose your mode</h1>
+        <p class="sub" id="gameName"></p>
+      </div>
+    </header>
+    <section id="styleList" class="grid modes" aria-label="Available modes"></section>
   </main>
 </body>
 </html>
