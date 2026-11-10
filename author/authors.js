@@ -1,12 +1,12 @@
-const authorList = document.getElementById("authors");
-const courseName = document.getElementById("courseName");
 const pageTitle = document.getElementById("pageTitle");
+const intro = document.getElementById("intro");
+const hubList = document.getElementById("hubAuthors");
+const boardTitle = document.getElementById("boardTitle");
+const boardIntro = document.getElementById("boardIntro");
+const boardList = document.getElementById("boardAuthors");
 
-Hub.json("../data/authors.json").then(data => {
-  pageTitle.textContent = data.pageTitle;
-  courseName.textContent = data.course;
-
-  data.authors.forEach(author => {
+function addCards(list, people) {
+  people.forEach(author => {
     const card = document.createElement("article");
     card.className = "author card";
 
@@ -15,7 +15,7 @@ Hub.json("../data/authors.json").then(data => {
     avatar.setAttribute("aria-hidden", "true");
     avatar.textContent = author.initials;
 
-    const name = document.createElement("h2");
+    const name = document.createElement("h3");
     name.textContent = author.name;
 
     const email = document.createElement("p");
@@ -29,11 +29,19 @@ Hub.json("../data/authors.json").then(data => {
 
     card.append(avatar, name, email, bio);
     Hub.tilt(card, 6);
-    authorList.appendChild(card);
+    list.appendChild(card);
   });
-
-  Hub.stagger(authorList.children, [
+  Hub.stagger(list.children, [
     { opacity: 0, transform: "translateY(50px) rotateY(-30deg)" },
     { opacity: 1, transform: "none" }
   ], { each: 150, duration: 1000, easing: Hub.ease.spring, fill: "backwards" });
+}
+
+Hub.json("../data/authors.json").then(data => {
+  pageTitle.textContent = data.pageTitle;
+  intro.textContent = data.intro;
+  boardTitle.textContent = data.boardTitle;
+  boardIntro.textContent = data.boardIntro;
+  addCards(hubList, data.hub);
+  addCards(boardList, data.board);
 });

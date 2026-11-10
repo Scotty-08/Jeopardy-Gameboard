@@ -25,6 +25,7 @@
   border: 3px dashed rgba(241, 190, 72, 0.7);
   animation: spin 14s linear infinite;
 }
-.author h2 { font-size: 1.6rem; margin-bottom: 4px; }
+.author h3 { font-size: 1.6rem; margin-bottom: 4px; }
+.board-title { margin-top: 56px; font-size: clamp(1.6rem, 4vw, 2.4rem); color: var(--gold-hot); }
 .author p { margin: 6px 0; color: #ead9dc; }
 .author a { font-weight: 800; }

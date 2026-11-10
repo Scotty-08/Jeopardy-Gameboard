@@ -1,12 +1,22 @@
 {
   "pageTitle": "Creators",
-  "course": "Construction of User Interfaces, Fall 2026",
-  "authors": [
+  "intro": "The ISU Game Hub is built by Scott Gray.",
+  "hub": [
     {
       "name": "Scott Gray",
       "email": "sgray08@iastate.edu",
       "initials": "SG",
-      "bio": "My name is Scott and I worked on the ISU Jeopardy board styling and the Board Games hub. I also rebuilt the hub with new games, animations, XP and leaderboards."
+      "bio": "I built the ISU Game Hub: the landing page, the animation engine, XP and leaderboards, and the Quiz Blitz, Family Feud, Maze and Memory Match games."
+    }
+  ],
+  "boardTitle": "ISU Jeopardy board",
+  "boardIntro": "The Jeopardy board started as a COM S 3190 (Construction of User Interfaces) team project, team MS_16.",
+  "board": [
+    {
+      "name": "Scott Gray",
+      "email": "sgray08@iastate.edu",
+      "initials": "SG",
+      "bio": "I worked on the ISU Jeopardy board styling and later rebuilt it with a multiple choice team mode, timer and Daily Double."
     },
     {
       "name": "Kai Gasparovich",
