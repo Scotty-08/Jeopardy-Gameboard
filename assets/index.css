@@ -12,7 +12,9 @@
 
 .eyebrow { margin: 0 0 10px; color: var(--gold); font-weight: 800; letter-spacing: 0.16em; font-size: 0.82rem; text-transform: uppercase; }
 
-.hero h1 { font-size: clamp(3.2rem, 9.4vw, 7.6rem); margin-bottom: 18px; letter-spacing: -0.01em; }
+.hero { container-type: inline-size; }
+.hero h1 { font-size: clamp(2.6rem, 8vw, 7.6rem); margin-bottom: 18px; letter-spacing: -0.01em; white-space: nowrap; }
+@supports (font-size: 1cqi) { .hero h1 { font-size: min(7.6rem, 17.5cqi); } }
 
 .tagline { min-height: 1.6em; margin: 0 0 30px; font-size: clamp(1.05rem, 2.2vw, 1.4rem); color: #ffe9c9; }
 .tagline::after { content: "▌"; margin-left: 2px; color: var(--gold); animation: flicker 1s steps(2, start) infinite; }
