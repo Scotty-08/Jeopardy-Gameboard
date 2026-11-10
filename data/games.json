@@ -1,17 +1,71 @@
 {
-  "pageTitle": "What would you like to play?",
+  "pageTitle": "Pick your game",
+  "tagline": "Every game earns XP. One game a day pays double.",
   "games": [
     {
+      "id": "jeopardy",
       "name": "Jeopardy",
+      "icon": "🎯",
+      "tagline": "Two teams, sixteen clues, one champion. Host it or play multiple choice.",
+      "tag": "Classic",
+      "players": "2 teams",
+      "time": "10 to 15 min",
+      "unit": "$",
+      "accent": "#c8102e",
+      "accent2": "#f1be48",
       "link": "board-styles.html?game=jeopardy"
     },
     {
-      "name": "Family Feud",
-      "link": "board-styles.html?game=family-feud"
+      "id": "blitz",
+      "name": "Quiz Blitz",
+      "icon": "⚡",
+      "tagline": "Multiple choice at full speed. Build a streak, burn the clock, use your lifelines.",
+      "tag": "New",
+      "players": "1 player",
+      "time": "1 to 3 min",
+      "unit": "pts",
+      "accent": "#f1be48",
+      "accent2": "#ff7a18",
+      "link": "board-styles.html?game=blitz"
     },
     {
+      "id": "feud",
+      "name": "Family Feud",
+      "icon": "📊",
+      "tagline": "Survey says! Guess the top answers, dodge the strikes, steal the bank.",
+      "tag": "New",
+      "players": "2 teams",
+      "time": "5 to 10 min",
+      "unit": "pts",
+      "accent": "#2fb8ff",
+      "accent2": "#7af0ff",
+      "link": "board-styles.html?game=feud"
+    },
+    {
+      "id": "maze",
       "name": "Maze",
+      "icon": "🌀",
+      "tagline": "Race Cy through a maze that builds itself, or watch a search algorithm solve one.",
+      "tag": "New",
+      "players": "1 player",
+      "time": "3 to 5 min",
+      "unit": "pts",
+      "accent": "#38e0a0",
+      "accent2": "#b6ff6b",
       "link": "board-styles.html?game=maze"
+    },
+    {
+      "id": "memory",
+      "name": "Memory Match",
+      "icon": "🃏",
+      "tagline": "Flip cards, find the campus pairs, and chain combos before the clock runs out.",
+      "tag": "New",
+      "players": "1 player",
+      "time": "2 to 4 min",
+      "unit": "pts",
+      "accent": "#b46bff",
+      "accent2": "#ff7ad9",
+      "link": "board-styles.html?game=memory"
     }
   ]
 }

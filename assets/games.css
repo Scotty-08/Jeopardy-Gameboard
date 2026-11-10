@@ -1,36 +1,91 @@
-body {
-  --nav-background: #000;
-  --nav-color: #45e08a;
-  --nav-border: #248eff;
-  --nav-button-background: #4da3ff;
-  --nav-button-color: #000;
-  margin: 0;
-  background: #000;
-  color: #45e08a;
-  font-family: Arial, sans-serif;
+.page { max-width: 1180px; margin: 0 auto; padding: clamp(24px, 5vw, 56px) clamp(16px, 4vw, 36px) 80px; }
+
+.page-head { margin-bottom: 26px; }
+.page-head h1 { font-size: clamp(2.4rem, 6.4vw, 4.6rem); margin-bottom: 10px; }
+.sub { margin: 0; color: var(--muted); font-size: 1.1rem; }
+
+.back { display: inline-block; margin-bottom: 18px; color: var(--gold); font-weight: 800; text-decoration: none; }
+.back:hover { text-decoration: underline; }
+
+.featured {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 26px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(241, 190, 72, 0.5);
+  background: linear-gradient(90deg, rgba(241, 190, 72, 0.18), rgba(200, 16, 46, 0.18));
+  font-weight: 800;
+  animation: glow 2.8s ease-in-out infinite;
+  --accent: var(--gold);
 }
-main {
-  margin: 150px auto;
-  text-align: center;
-}
-h1 {
-  margin-bottom: 32px;
-  font-size: 60px;
-}
-.button-list {
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 22px; perspective: 1200px; }
+.grid.modes { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+
+/* ------------------------------------------------------------ game cards */
+.gcard {
+  --accent: var(--cardinal);
+  --accent2: var(--gold);
   display: flex;
-  width: 320px;
-  margin: 0 auto;
   flex-direction: column;
-  gap: 14px;
-}
-.choice-button {
-  padding: 12px 24px;
-  border: 1.5px solid #45e08a;
-  border-radius: 8px;
-  background: #4da3ff;
-  color: #000;
-  font-size: 25px;
-  font-weight: bold;
+  gap: 10px;
+  padding: 24px 22px 20px;
+  color: var(--ink);
   text-decoration: none;
+  overflow: hidden;
+  min-height: 300px;
+}
+.gcard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(520px 260px at 0% 0%, color-mix(in srgb, var(--accent) 38%, transparent), transparent 70%);
+  pointer-events: none;
+}
+.gcard:hover { border-color: var(--accent2); box-shadow: 0 30px 70px -26px var(--accent), 0 0 0 1px var(--accent2) inset; }
+.gcard > * { position: relative; }
+.gcard h2 { font-size: 1.7rem; margin: 6px 0 0; }
+.gcard p { margin: 0; color: #e8d9dc; flex: 1; }
+
+.orb {
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 20px;
+  font-size: 2.2rem;
+  background: linear-gradient(150deg, var(--accent2), var(--accent));
+  box-shadow: 0 14px 34px -10px var(--accent), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.gcard:hover .orb { transform: rotate(-10deg) scale(1.16); }
+.orb.big { width: 92px; height: 92px; font-size: 3rem; border-radius: 26px; flex: none; animation: floaty 3.6s ease-in-out infinite; }
+
+.gcard .chips { position: absolute; top: 18px; right: 16px; display: flex; gap: 6px; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px 16px; color: var(--muted); font-size: 0.9rem; font-weight: 600; }
+.best { font-weight: 800; color: var(--accent2); font-size: 0.95rem; }
+.go {
+  align-self: flex-start;
+  margin-top: 6px;
+  padding: 9px 20px;
+  border-radius: 999px;
+  font-weight: 900;
+  color: #1a0a00;
+  background: linear-gradient(180deg, var(--accent2), color-mix(in srgb, var(--accent2) 70%, var(--accent)));
+  box-shadow: 0 10px 24px -10px var(--accent);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.gcard:hover .go { transform: translateX(6px) scale(1.06); }
+
+/* ------------------------------------------------------------ mode cards */
+.game-head { display: flex; align-items: center; gap: 22px; }
+.mcard { --accent: var(--cardinal); --accent2: var(--gold); min-height: 210px; }
+.mcard h2 { font-size: 1.45rem; }
+.mcard .orb { width: 56px; height: 56px; font-size: 1.8rem; border-radius: 16px; }
+
+@media (max-width: 560px) {
+  .grid, .grid.modes { grid-template-columns: 1fr; }
+  .game-head { flex-direction: column; align-items: flex-start; }
 }

@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Choose a Game</title>
+  <link rel="stylesheet" href="../assets/hub.css">
   <link rel="stylesheet" href="../assets/games.css">
-  <link rel="stylesheet" href="../assets/navbar.css">
+  <script src="../assets/hub.js" defer></script>
   <script src="games.js" defer></script>
 </head>
 <body>
   <nav class="site-nav" aria-label="Main navigation">
     <a href="../index.html">Home</a>
-    <a href="games.html">Games</a>
+    <a href="games.html" aria-current="page">Games</a>
+    <a href="leaderboard.html">Leaderboard</a>
     <details class="info-menu">
       <summary>Info</summary>
       <div class="info-links">
@@ -19,9 +22,13 @@
       </div>
     </details>
   </nav>
-  <main>
-    <h1 id="pageTitle"></h1>
-    <section id="gameList" class="button-list" aria-label="Available games" aria-live="polite"></section>
+  <main class="page">
+    <header class="page-head">
+      <h1 class="title" id="pageTitle">Pick your game</h1>
+      <p class="sub" id="pageSub"></p>
+    </header>
+    <p class="featured" id="featured" hidden></p>
+    <section id="gameList" class="grid" aria-label="Available games"></section>
   </main>
 </body>
 </html>
