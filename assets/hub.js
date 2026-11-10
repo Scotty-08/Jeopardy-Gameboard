@@ -1,4 +1,4 @@
-/* ISU Game Hub: shared engine.
+/* GameHub: shared engine.
    Animation (Web Animations API + canvas particles), synthesized sound, XP / levels,
    per-game leaderboards, page transitions and the animated background.
    No dependencies. Every page loads this file first and uses window.Hub. */
@@ -554,7 +554,7 @@
     const brand = document.createElement("span");
     brand.className = "brand";
     brand.setAttribute("aria-hidden", "true");
-    brand.innerHTML = '<svg viewBox="0 0 32 32" width="26" height="26"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 7h22"/><path d="M8 13h17"/><path d="M11 19h11"/><path d="M14 25h5"/></g></svg><b>ISU HUB</b>';
+    brand.innerHTML = '<svg viewBox="0 0 32 32" width="26" height="26"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 7h22"/><path d="M8 13h17"/><path d="M11 19h11"/><path d="M14 25h5"/></g></svg><b>GameHub</b>';
     nav.prepend(brand);
 
     const right = document.createElement("div");

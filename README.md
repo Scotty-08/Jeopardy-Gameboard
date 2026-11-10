@@ -1,4 +1,4 @@
-# ISU Game Hub
+# GameHub
 
 A game hub for Iowa State fans, built by Scott Gray (sgray08@iastate.edu). Five games, each with more than one way to play, plus XP, levels and leaderboards.
 
