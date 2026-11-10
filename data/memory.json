@@ -1,0 +1,21 @@
+{
+  "note": "Card faces use the campus and Iowa images from assets/images. Names match the Jeopardy answers.",
+  "cards": [
+    { "id": "campanile", "name": "Campanile", "image": "../assets/images/campanile.jpg" },
+    { "id": "brunnier", "name": "Brunnier Art Museum", "image": "../assets/images/brunnier.jpg" },
+    { "id": "reiman", "name": "Reiman Gardens", "image": "../assets/images/reiman.jpg" },
+    { "id": "butterfly", "name": "Butterfly Wing", "image": "../assets/images/butterflywing.jpg" },
+    { "id": "dsm", "name": "Des Moines", "image": "../assets/images/dsm.jpg" },
+    { "id": "river", "name": "Mississippi River", "image": "../assets/images/river.jpg" },
+    { "id": "hawkeye", "name": "Hawkeye State", "image": "../assets/images/hawkeye.jpg" },
+    { "id": "cy", "name": "Cy", "image": "../assets/images/cy.jpg" },
+    { "id": "cardinal", "name": "Cardinal", "image": "../assets/images/cardinal.jpg" },
+    { "id": "saturn", "name": "Saturn", "image": "../assets/images/saturn.jpg" },
+    { "id": "solar", "name": "Solar Energy", "image": "../assets/images/solar.jpg" },
+    { "id": "thermometer", "name": "Thermometer", "image": "../assets/images/thermometer.jpg" },
+    { "id": "physics", "name": "Physics", "image": "../assets/images/physics.jpg" },
+    { "id": "gold", "name": "Gold", "image": "../assets/images/gold.jpg" },
+    { "id": "cyclones", "name": "Cyclones", "image": "../assets/images/cyclones.png" },
+    { "id": "state29", "name": "29th State", "image": "../assets/images/29.jpg" }
+  ]
+}

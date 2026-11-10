@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Match</title>
+  <link rel="stylesheet" href="../assets/hub.css">
+  <link rel="stylesheet" href="../assets/memory.css">
+  <script src="../assets/hub.js" defer></script>
+  <script src="memory.js" defer></script>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="../index.html">Home</a>
+    <a href="games.html">Games</a>
+    <a href="leaderboard.html">Leaderboard</a>
+    <details class="info-menu">
+      <summary>Info</summary>
+      <div class="info-links">
+        <a href="../author/authors.html">Creators</a>
+        <a href="../faq/faq.html">FAQ</a>
+      </div>
+    </details>
+  </nav>
+
+  <main class="memory">
+    <section id="start" class="panel">
+      <h1 id="memTitle" class="title">Memory Match</h1>
+      <p id="memLead" class="lead"></p>
+      <ul id="rules" class="rules"></ul>
+      <button id="go" class="btn gold big" type="button">Deal the cards</button>
+    </section>
+
+    <section id="game" hidden>
+      <header class="hud">
+        <div class="stat"><span>Score</span><b id="score">0</b></div>
+        <div class="stat"><span id="timeLabel">Time</span><b id="time">0</b></div>
+        <div class="stat"><span>Moves</span><b id="moves">0</b></div>
+        <div class="stat"><span>Combo</span><b id="combo">x1</b></div>
+      </header>
+      <div class="bar" id="barWrap" hidden><i id="bar"></i></div>
+      <div id="grid" class="grid" role="group" aria-label="Memory cards"></div>
+      <p id="status" class="status" aria-live="polite"></p>
+    </section>
+
+    <section id="end" class="panel end" hidden>
+      <p class="kicker" id="endKicker">All pairs found</p>
+      <h2 id="endScore" class="title">0</h2>
+      <p class="lead" id="endNote"></p>
+      <ul class="end-stats" id="endStats"></ul>
+      <div class="actions">
+        <button id="again" class="btn gold" type="button">Play again</button>
+        <a id="endBoard" class="btn" href="leaderboard.html?game=memory">Leaderboard</a>
+        <a class="btn ghost" href="games.html">All games</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
