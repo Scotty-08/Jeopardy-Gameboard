@@ -3,15 +3,15 @@
   "questions": [
     {
       "question": "What is the ISU Game Hub?",
-      "answer": "It is a hub of Iowa State themed games that our team built for COM S 3190: Jeopardy, Quiz Blitz, Family Feud, Maze and Memory Match. Pick a game, pick a mode, and play."
+      "answer": "It is a hub of Iowa State themed games: Jeopardy, Quiz Blitz, Family Feud, Maze and Memory Match. Pick a game, pick a mode, and play."
     },
     {
       "question": "Which games can I play right now?",
       "answer": "All five. Jeopardy has a host mode and a multiple-choice team mode, Quiz Blitz has a 60-second mode and Sudden Death, Family Feud has a 3-round and a 6-round match, Maze lets you play or watch a solver, and Memory Match has an easy and a hard board."
     },
     {
-      "question": "Why did we choose to create the ISU board?",
-      "answer": "We thought that with this project we would create a fun outcome, and an Iowa State themed game is something people on campus can enjoy."
+      "question": "Why was the ISU Jeopardy board made?",
+      "answer": "ISU Jeopardy was a COM S 3190 team project (team MS_16: Scott Gray and Kai Gasparovich). We wanted a fun Iowa State themed game that people on campus can enjoy. Scott later grew it into the full game hub."
     },
     {
       "question": "How do XP and levels work?",
