@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maze</title>
+  <link rel="stylesheet" href="../assets/hub.css">
+  <link rel="stylesheet" href="../assets/maze.css">
+  <script src="../assets/hub.js" defer></script>
+  <script src="maze-lib.js" defer></script>
+  <script src="maze.js" defer></script>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="../index.html">Home</a>
+    <a href="games.html">Games</a>
+    <a href="leaderboard.html">Leaderboard</a>
+    <details class="info-menu">
+      <summary>Info</summary>
+      <div class="info-links">
+        <a href="../author/authors.html">Creators</a>
+        <a href="../faq/faq.html">FAQ</a>
+      </div>
+    </details>
+  </nav>
+
+  <main class="maze-page">
+    <section id="start" class="panel">
+      <h1 id="mazeTitle" class="title">Maze</h1>
+      <p id="mazeLead" class="lead"></p>
+      <ul id="rules" class="rules"></ul>
+      <button id="go" class="btn gold big" type="button">Start</button>
+    </section>
+
+    <section id="stage" hidden>
+      <header class="hud" id="runHud">
+        <div class="stat"><span>Level</span><b id="level">1</b></div>
+        <div class="stat"><span>Time</span><b id="time">0</b></div>
+        <div class="stat"><span>Moves</span><b id="moves">0</b></div>
+        <div class="stat"><span>Score</span><b id="score">0</b></div>
+      </header>
+
+      <div class="solver-controls" id="solverControls" hidden>
+        <div class="seg" role="radiogroup" aria-label="Algorithm" id="algoSeg">
+          <button type="button" role="radio" aria-checked="true" data-algo="bfs">BFS</button>
+          <button type="button" role="radio" aria-checked="false" data-algo="dfs">DFS</button>
+          <button type="button" role="radio" aria-checked="false" data-algo="astar">A*</button>
+        </div>
+        <label class="field">Size
+          <select id="size"><option value="10">10 x 10</option><option value="16" selected>16 x 16</option><option value="24">24 x 24</option><option value="32">32 x 32</option></select>
+        </label>
+        <label class="field">Speed
+          <select id="speed"><option value="slow">Slow</option><option value="normal" selected>Normal</option><option value="fast">Fast</option></select>
+        </label>
+        <button id="newMaze" class="btn ghost" type="button">New maze</button>
+        <button id="solve" class="btn gold" type="button">Solve</button>
+      </div>
+
+      <div class="board-wrap">
+        <canvas id="maze" aria-label="Maze board" role="img"></canvas>
+        <div id="overlay" class="overlay" hidden></div>
+      </div>
+
+      <p id="status" class="status" aria-live="polite"></p>
+      <ul id="stats" class="stats" hidden></ul>
+
+      <div id="pad" class="pad" aria-label="Move buttons" hidden>
+        <button type="button" data-dir="N" aria-label="Up">▲</button>
+        <button type="button" data-dir="W" aria-label="Left">◀</button>
+        <button type="button" data-dir="S" aria-label="Down">▼</button>
+        <button type="button" data-dir="E" aria-label="Right">▶</button>
+      </div>
+    </section>
+
+    <section id="end" class="panel end" hidden>
+      <p class="kicker" id="endKicker">Maze cleared</p>
+      <h2 id="endScore" class="title">0</h2>
+      <p class="lead" id="endNote"></p>
+      <div class="actions">
+        <button id="again" class="btn gold" type="button">Play again</button>
+        <a id="endBoard" class="btn" href="leaderboard.html?game=maze">Leaderboard</a>
+        <a class="btn ghost" href="games.html">All games</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
