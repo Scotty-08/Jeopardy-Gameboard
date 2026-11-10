@@ -570,28 +570,54 @@
     updateChip();
   }
 
-  // A short curtain slides away when a page opens. There is no exit animation on purpose:
-  // an exit curtain gets frozen over the page when the browser restores it from the
-  // back/forward cache, which made the Back button and swipe-back look stuck.
+  // Page transitions: a curtain wipes in when you follow a link and slides away when the next
+  // page opens. The exit curtain is bfcache-safe: it is always removed on pagehide, so the
+  // snapshot the browser stores never has it, and on pageshow in case a page comes back anyway.
+  // (An exit curtain left in place is what made Back and swipe-back look stuck.)
   function transitions() {
     if (reduce) return;
     let type = "navigate";
     try { type = performance.getEntriesByType("navigation")[0].type; } catch (e) { /* older browsers */ }
-    if (type !== "navigate") return;   // reload, back and forward show the page straight away
 
-    const wipe = document.createElement("div");
-    wipe.className = "wipe";
-    wipe.setAttribute("aria-hidden", "true");
-    wipe.style.transform = "translateX(0)";
-    document.body.appendChild(wipe);
-    const remove = () => wipe.remove();
-    const run = anim(wipe, [{ transform: "translateX(0)" }, { transform: "translateX(101%)" }], { duration: 480, easing: ease.inOut, delay: 40 });
-    run.finished.then(remove, remove);
+    function curtain() {
+      const el = document.createElement("div");
+      el.className = "wipe";
+      el.setAttribute("aria-hidden", "true");
+      document.body.appendChild(el);
+      return el;
+    }
 
-    // Safety net: if the page is shown again from the cache, the curtain must never be there.
-    window.addEventListener("pageshow", remove);
-    window.addEventListener("pagehide", remove);
-    setTimeout(remove, 1500);
+    // Entry: only for a fresh navigation. Reload, back and forward show the page straight away.
+    if (type === "navigate") {
+      const wipe = curtain();
+      wipe.style.transform = "translateX(0)";
+      const remove = () => wipe.remove();
+      const run = anim(wipe, [{ transform: "translateX(0)" }, { transform: "translateX(101%)" }], { duration: 480, easing: ease.inOut, delay: 40 });
+      run.finished.then(remove, remove);
+      setTimeout(remove, 1500);
+    }
+
+    // Exit: wipe in over the page, then go.
+    let exiting = null;
+    const clearExit = () => { if (exiting) { exiting.remove(); exiting = null; } };
+    window.addEventListener("pagehide", clearExit);
+    window.addEventListener("pageshow", clearExit);
+
+    document.addEventListener("click", event => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const link = event.target.closest && event.target.closest("a[href]");
+      if (!link || (link.target && link.target !== "_self") || link.hasAttribute("download")) return;
+      const url = new URL(link.href, location.href);
+      if (url.origin !== location.origin || !/^https?:$/.test(url.protocol)) return;
+      if (url.pathname === location.pathname && url.search === location.search) return;   // same page or in-page anchor
+      if (exiting) return;
+      event.preventDefault();
+      exiting = curtain();
+      const go = () => { location.href = url.href; };
+      const run = anim(exiting, [{ transform: "translateX(-101%)" }, { transform: "translateX(0)" }], { duration: 300, easing: ease.inOut, fill: "forwards" });
+      run.finished.then(go, go);
+      setTimeout(clearExit, 2500);   // if the navigation never happens, never leave the page covered
+    });
   }
 
   function buttonSounds() {
