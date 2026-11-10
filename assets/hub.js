@@ -570,34 +570,28 @@
     updateChip();
   }
 
+  // A short curtain slides away when a page opens. There is no exit animation on purpose:
+  // an exit curtain gets frozen over the page when the browser restores it from the
+  // back/forward cache, which made the Back button and swipe-back look stuck.
   function transitions() {
-    const ENTER = "hubWipe";
+    if (reduce) return;
+    let type = "navigate";
+    try { type = performance.getEntriesByType("navigation")[0].type; } catch (e) { /* older browsers */ }
+    if (type !== "navigate") return;   // reload, back and forward show the page straight away
+
     const wipe = document.createElement("div");
     wipe.className = "wipe";
     wipe.setAttribute("aria-hidden", "true");
+    wipe.style.transform = "translateX(0)";
     document.body.appendChild(wipe);
+    const remove = () => wipe.remove();
+    const run = anim(wipe, [{ transform: "translateX(0)" }, { transform: "translateX(101%)" }], { duration: 480, easing: ease.inOut, delay: 40 });
+    run.finished.then(remove, remove);
 
-    let incoming = false;
-    try { incoming = sessionStorage.getItem(ENTER) === "1"; sessionStorage.removeItem(ENTER); } catch (e) { /* ignore */ }
-    if (incoming && !reduce) {
-      wipe.style.transform = "translateX(0)";
-      anim(wipe, [{ transform: "translateX(0)" }, { transform: "translateX(101%)" }], { duration: 520, easing: ease.inOut, delay: 60 });
-    }
-
-    document.addEventListener("click", event => {
-      const link = event.target.closest && event.target.closest("a[href]");
-      if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      if (link.target && link.target !== "_self") return;
-      const url = new URL(link.href, location.href);
-      if (url.origin !== location.origin || (url.pathname === location.pathname && url.search === location.search)) return;
-      if (reduce) return;
-      event.preventDefault();
-      sfx.play("whoosh");
-      try { sessionStorage.setItem(ENTER, "1"); } catch (e) { /* ignore */ }
-      anim(wipe, [{ transform: "translateX(-101%)" }, { transform: "translateX(0)" }], { duration: 340, easing: ease.inOut }).finished.then(() => { location.href = link.href; });
-    });
-
-    window.addEventListener("pageshow", e => { if (e.persisted) wipe.style.transform = "translateX(-101%)"; });
+    // Safety net: if the page is shown again from the cache, the curtain must never be there.
+    window.addEventListener("pageshow", remove);
+    window.addEventListener("pagehide", remove);
+    setTimeout(remove, 1500);
   }
 
   function buttonSounds() {
