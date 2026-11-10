@@ -1,11 +1,32 @@
 {
-  "pageTitle": "Leaderboard",
-  "columns": ["Rank", "Score"],
-
-    "scores": [
-        { "score": 2400},
-        { "score": 2100},
-        { "score": 1800},
-        { "score": 1500}
+  "pageTitle": "Leaderboards",
+  "columns": ["Rank", "Score", "Mode", "When"],
+  "seeds": {
+    "jeopardy": [
+      { "score": 2400, "mode": "Seeded" },
+      { "score": 2100, "mode": "Seeded" },
+      { "score": 1800, "mode": "Seeded" },
+      { "score": 1500, "mode": "Seeded" }
+    ],
+    "blitz": [
+      { "score": 5200, "mode": "Seeded" },
+      { "score": 3900, "mode": "Seeded" },
+      { "score": 2600, "mode": "Seeded" }
+    ],
+    "feud": [
+      { "score": 420, "mode": "Seeded" },
+      { "score": 310, "mode": "Seeded" },
+      { "score": 220, "mode": "Seeded" }
+    ],
+    "maze": [
+      { "score": 2800, "mode": "Seeded" },
+      { "score": 1900, "mode": "Seeded" },
+      { "score": 1100, "mode": "Seeded" }
+    ],
+    "memory": [
+      { "score": 2200, "mode": "Seeded" },
+      { "score": 1600, "mode": "Seeded" },
+      { "score": 900, "mode": "Seeded" }
     ]
+  }
 }

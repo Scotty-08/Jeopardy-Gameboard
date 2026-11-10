@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leaderboard</title>
-  <link rel="stylesheet" href="../assets/navbar.css">
+  <title>Leaderboards</title>
+  <link rel="stylesheet" href="../assets/hub.css">
   <link rel="stylesheet" href="../assets/leaderboard.css">
+  <script src="../assets/hub.js" defer></script>
   <script src="leaderboard.js" defer></script>
 </head>
 <body>
   <nav class="site-nav" aria-label="Main navigation">
     <a href="../index.html">Home</a>
     <a href="games.html">Games</a>
+    <a href="leaderboard.html" aria-current="page">Leaderboard</a>
     <details class="info-menu">
       <summary>Info</summary>
       <div class="info-links">
@@ -20,17 +22,22 @@
       </div>
     </details>
   </nav>
-<main>
+  <main class="lb">
     <header class="leaderboard-header">
-      <h1 id="pageTitle"></h1>
+      <h1 class="title" id="pageTitle">Leaderboards</h1>
+      <p class="sub">Scores are saved in this browser. Beat the top spot to earn the crown.</p>
     </header>
-    <a class="back-button" href="ISU_Board.html">Back to Game</a>
-    <table class="leaderboard-table">
+    <div class="tabs" id="tabs" role="tablist" aria-label="Choose a game"></div>
+    <div class="lb-actions">
+      <a class="btn gold" id="playGame" href="games.html">Play this game</a>
+    </div>
+    <table class="table" aria-live="polite">
       <thead>
         <tr id="tableHeader"></tr>
       </thead>
       <tbody id="leaderboard"></tbody>
     </table>
-</main>
+    <p class="empty" id="empty" hidden>No scores yet. Be the first!</p>
+  </main>
 </body>
 </html>
