@@ -2,15 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Game Boards</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ISU Game Hub</title>
+  <meta name="description" content="An Iowa State themed game hub: Jeopardy, Quiz Blitz, Family Feud, Maze and Memory Match.">
+  <link rel="stylesheet" href="assets/hub.css">
   <link rel="stylesheet" href="assets/index.css">
-  <link rel="stylesheet" href="assets/navbar.css">
+  <script src="assets/hub.js" defer></script>
   <script src="index.js" defer></script>
 </head>
 <body>
   <nav class="site-nav" aria-label="Main navigation">
-    <a href="index.html">Home</a>
+    <a href="index.html" aria-current="page">Home</a>
     <a href="content/games.html">Games</a>
+    <a href="content/leaderboard.html">Leaderboard</a>
     <details class="info-menu">
       <summary>Info</summary>
       <div class="info-links">
@@ -19,9 +23,23 @@
       </div>
     </details>
   </nav>
-  <main>
-    <h1 id="welcomeTitle"></h1>
-    <a class="choice-button" id="playLink" href="content/games.html">Let's play</a>
+
+  <main class="landing">
+    <section class="hero">
+      <p class="eyebrow" id="eyebrow"></p>
+      <h1 class="title" id="welcomeTitle">ISU Game Hub</h1>
+      <p class="tagline" id="tagline" aria-live="polite"></p>
+      <div class="cta">
+        <a class="btn gold big" id="playLink" href="content/games.html">Let's play</a>
+        <a class="btn ghost big" href="content/leaderboard.html">Leaderboards</a>
+      </div>
+      <ul class="stats" id="stats" aria-label="Your progress"></ul>
+    </section>
+
+    <div class="art" aria-hidden="true">
+      <div class="funnel" id="funnel"></div>
+      <div class="orbit" id="orbit"></div>
+    </div>
   </main>
 </body>
 </html>

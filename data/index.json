@@ -1,4 +1,11 @@
 {
-  "title": "Game Boards",
-  "buttonLabel": "Let's play"
+  "title": "ISU Game Hub",
+  "eyebrow": "Iowa State University  ·  COM S 3190  ·  Team MS_16",
+  "buttonLabel": "Let's play",
+  "taglines": [
+    "Five games. One cardinal-and-gold arcade.",
+    "Earn XP, level up and climb every leaderboard.",
+    "Jeopardy, Family Feud, mazes, memory and lightning quizzes.",
+    "Built by Cyclones, for Cyclones."
+  ]
 }
